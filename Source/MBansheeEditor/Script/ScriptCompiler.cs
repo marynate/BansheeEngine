@@ -174,9 +174,6 @@ namespace BansheeEditor
             for (int i = 0; i < files.Length; i++)
                 argumentsBuilder.Append(" \"" + files[i] + "\"");
 
-            if (File.Exists(outputFile))
-                File.Delete(outputFile);
-
             string outputDir = Path.GetDirectoryName(outputFile);
             if (!Directory.Exists(outputDir))
                 Directory.CreateDirectory(outputDir);
